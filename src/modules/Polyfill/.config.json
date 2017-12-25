@@ -1,0 +1,11 @@
+{
+	"features": [
+		"Event",
+		"Element.prototype.classList",
+		"Array.prototype.forEach"
+	],
+	"flags": [
+		"always",
+		"gated"
+	]
+}

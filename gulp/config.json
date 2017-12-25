@@ -1,0 +1,6 @@
+{
+	"sourcePath": "./src",
+	"releasePath": "./build",
+	"cachePath": "./.cache",
+	"compileName": "**/.compile.js"
+}

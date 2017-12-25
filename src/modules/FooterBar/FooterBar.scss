@@ -1,0 +1,24 @@
+.footer-bar{
+	@include line(44px);
+	background: #333;
+	min-width: $container-width;
+	@extend %cfff;
+	.inner{
+		width: $container-width;
+		@extend %ma;
+	}
+	a{
+		@extend %cfff;
+	}
+}
+
+.fb-company{
+	@extend %fl;
+}
+
+.fb-link{
+	@extend %fr;
+	a{
+		margin-left: 5px;
+	}
+}

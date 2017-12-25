@@ -1,0 +1,25 @@
+.nav-hot-category{
+	width: $container-width - 2px;
+	height: 40px;
+	@extend %ma;
+	@extend %oh;
+	border: solid 1px #e5e5e5;
+	border-top: 0;
+	@extend %f0;
+	strong, a{
+		@extend %f14;
+		@extend %dib;
+		@extend %vat;
+		@extend %nowrap;
+		line-height: 16px;
+		margin-top: 12px;
+		margin-bottom: 12px;
+	}
+	strong{
+		@extend %fwn;
+		margin-left: 15px;
+	}
+	a{
+		margin-left: 12px;
+	}
+}

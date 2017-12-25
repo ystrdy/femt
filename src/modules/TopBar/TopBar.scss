@@ -1,0 +1,81 @@
+.top-bar{
+	height: 40px;
+	border-bottom: solid 1px #e8e8e8;
+	min-width: $container-width;
+	.inner{
+		width: $container-width;
+		@extend %ma;
+		@include line(20px);
+		padding-top: 10px;
+	}
+	& > div{
+		a{
+			&:first-child{
+				&:before{
+					display: none;
+				}
+			}
+		}
+	}
+	a{
+		@extend %fl;
+		@extend %pr;
+		padding-left: 20px;
+		margin-left: 25px;
+		@extend %f12;
+		@extend %c6;
+		&:before, &:after{
+			@extend %content;
+			@extend %pa;
+			top: 50%;
+		}
+		&:before{
+			left: -11px;
+			width: 1px;
+			height: 14px;
+			margin-top: -7px;
+			background: #dfdfdf;
+			cursor: default;
+		}
+		&:after{
+			left: 0;
+		}
+	}
+}
+
+.tb-left{
+	@extend %fl;
+	margin-left: -25px;
+}
+
+.tb-right{
+	@extend %fr;
+}
+
+.tb-home{
+	&:after{
+		@include sprite($tb-home-sprite);
+		margin-top: nth($tb-home-sprite, 6) / -2;
+	}
+}
+
+.tb-category{
+	&:after{
+		@include sprite($tb-category-sprite);
+		margin-top: nth($tb-category-sprite, 6) / -2;
+	}
+}
+
+.tb-mobile{
+	&:after{
+		@include sprite($tb-mobile-sprite);
+		margin-top: nth($tb-mobile-sprite, 6) / -2;
+	}
+}
+
+.tb-newest{
+	&:after{
+		@include sprite($tb-newest-sprite);
+		margin-top: nth($tb-newest-sprite, 6) / -2;
+	}
+}

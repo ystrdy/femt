@@ -1,0 +1,45 @@
+.nav-bar{
+	width: $container-width;
+	@include line(40px);
+	background: #288bde;
+	@extend %ma;
+	a{
+		@extend %fl;
+		padding-left: 15px;
+		padding-right: 15px;
+		@extend %f16;
+		border-right: solid 1px #3a9ae4;
+		@extend %cfff;
+		@extend %pr;
+	}
+	.cur{
+		background: #006DCC;
+		&:before{
+			@extend %content;
+			@extend %pa;
+			left: 50%;
+			bottom: 0;
+			@extend %db;
+			border-width: 5px;
+			border-style: dashed dashed solid dashed;
+			border-color: transparent transparent #fff transparent;
+			width: 0;
+			height: 0;
+			margin-left: -5px;
+		}
+	}
+	.nb-all{
+		@extend %fr;
+		border-right: 0;
+		padding-left: 39px;
+		padding-right: 19px;
+		&:after{
+			@extend %content;
+			@extend %pa;
+			left: 15px;
+			top: 50%;
+			@include sprite($nb-all-sprite);
+			margin-top: nth($nb-all-sprite, 6) / -2;
+		}
+	}
+}

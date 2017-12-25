@@ -1,0 +1,25 @@
+.friend-links{
+	background: #fafafa;
+	min-width: $container-width;
+	.inner{
+		@extend %f0;
+		width: $container-width;
+		@extend %ma;
+	}
+	strong, a{
+		margin-top: 12px;
+		margin-bottom: 12px;
+		@extend %f14;
+		@extend %dib;
+		@extend %vat;
+		line-height: 16px;
+	}
+	strong{
+		@extend %fwn;
+	}
+	a{
+		margin-left: 2px;
+		margin-right: 2px;
+		@extend %nowrap;
+	}
+}

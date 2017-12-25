@@ -1,0 +1,132 @@
+.filter-bar{
+	background: #F2F2F2;
+	min-width: $container-width;
+	height: 80px;
+	@extend %oh;
+	font-family: PingFangSC-Regular,'-apple-system',Simsun;
+	.inner{
+		width: $container-width;
+		@extend %ma;
+	}
+}
+
+.fb-form{
+	@extend %fl;
+	height: 34px;
+	line-height: 34px;
+	border-right: solid 1px #D9D9D9;
+	margin-top: 23px;
+}
+
+.fb-prefix{
+	@extend %fl;
+	margin-right: 24px;
+	padding-left: 48px;
+	color: #1a1a1a;
+}
+
+.fb-select{
+	@extend %fl;
+	@extend %pr;
+	@extend %bgw;
+	margin-right: 12px;
+	@extend %cp;
+	@extend %usn;
+	select{
+		@extend %pa;
+		left: -999px;
+		top: -999px;
+	}
+}
+
+.fb-text{
+	@include line(34px);
+	padding-left: 11px;
+	padding-right: 11px;
+	@extend %c6;
+	@extend %f12;
+	&:after{
+		@extend %content;
+		@extend %pa;
+		right: 11px;
+		top: 50%;
+		margin-top: -3px;
+		@extend %db;
+		width: 0;
+		height: 0;
+		border-width: 5px;
+		border-style: solid dashed dashed dashed;
+		border-color: #a6a6a6 transparent transparent transparent;
+	}
+	&:hover{
+		@extend %c3;
+	}
+}
+
+.fb-drop{
+	@extend %dn;
+	@extend %pa;
+	z-index: 99;
+	width: 100%;
+	@extend %bgw;
+	@extend %f12;
+	box-shadow: 0 2px 4px rgba(0,0,0,.2);
+	border-radius: 1px;
+	border-top: 1px solid #eee;
+	@extend %oa;
+	@extend %usn;
+	li{
+		@include line(30px);
+		padding: 0 12px;
+		@extend %c6;
+		@extend %cp;
+		transition: color 0.3s;
+		&:hover{
+			background: #F7F7F7;
+			@extend %c3;
+		}
+	}
+}
+
+.fb-ok{
+	@extend %fl;
+	width: 100px;
+	@include line(34px);
+	@extend %pr;
+	@extend %tac;
+	background: #bf2c24;
+	@extend %cfff;
+	margin-right: 36px;
+	&:before{
+		content: '按条件找书';
+	}
+	input{
+		@extend %pa;
+		left: -999px;
+		top: -999px;
+	}
+}
+
+.fb-hots{
+	@extend %fl;
+	margin-left: 35px;
+	height: 40px;
+	@extend %oh;
+	margin-top: 20px;
+	@extend %f12;
+	i{
+		@extend %fl;
+		line-height: 40px;
+		color: #a6a6a6;
+	}
+	ul{
+		@extend %fl;
+		margin-left: 16px;
+	}
+	li{
+		line-height: 20px;
+	}
+	a{
+		@extend %c6;
+	}
+}

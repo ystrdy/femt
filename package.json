@@ -1,0 +1,24 @@
+{
+  "name": "example",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "start": "gulp develop",
+    "build": "gulp product"
+  },
+  "author": "xuxufei@2144.cn",
+  "license": "MIT",
+  "dependencies": {
+    "fs-extra": "^5.0.0",
+    "glob": "^7.1.2",
+    "gulp": "^3.9.1",
+    "gulp-load-plugins": "^1.5.0",
+    "gulp-remote-src": "^0.4.3",
+    "gulp-rename": "^1.2.2",
+    "gulp-util": "^3.0.8",
+    "gulp.spritesmith": "^6.7.0",
+    "lodash": "^4.17.4",
+    "md5-file": "^3.2.3",
+    "through2": "^2.0.3"
+  }
+}
