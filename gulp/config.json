@@ -1,6 +1,11 @@
 {
+	"debug": true,
 	"sourcePath": "./src",
-	"releasePath": "./build",
+	"outputPath": "./build",
 	"cachePath": "./.cache",
-	"compileName": "**/.compile.js"
+	"compileName": "**/.compile.js",
+	"shortMaps": {
+		"module": "modules/",
+		"layout": "layout/"
+	}
 }

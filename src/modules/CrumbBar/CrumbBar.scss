@@ -1,0 +1,26 @@
+.crumb-bar{
+	@extend %f0;
+	@include line(48px);
+	width: $container-width;
+	@extend %ma;
+	a, span{
+		@extend %f16;
+		@extend %c6;
+	}
+	span{
+		margin: 0 6px;
+	}
+}
+
+.cb-home{
+	padding-left: 24px;
+	@extend %pr;
+	&:before{
+		@extend %content;
+		@extend %pa;
+		left: 0;
+		top: 50%;
+		@include sprite($cb-home);
+		margin-top: nth($cb-home, 6) / -2 + 1;
+	}
+}

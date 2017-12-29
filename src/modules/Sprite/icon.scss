@@ -1,0 +1,192 @@
+// SCSS variables are information about icon's compiled state, stored under its original file name
+//
+// .icon-home {
+//   width: $icon-home-width;
+// }
+//
+// The large array-like variables contain all information about a single icon
+// $icon-home: x y offset_x offset_y width height total_width total_height image_path;
+//
+// At the bottom of this section, we provide information about the spritesheet itself
+// $spritesheet: width height image $spritesheet-sprites;
+%icon_background_image {
+  background-image: inline('icon.png');
+}
+$hb-icon-hover-name: 'hb-icon-hover';
+$hb-icon-hover-x: 239px;
+$hb-icon-hover-y: 68px;
+$hb-icon-hover-offset-x: -239px;
+$hb-icon-hover-offset-y: -68px;
+$hb-icon-hover-width: 16px;
+$hb-icon-hover-height: 16px;
+$hb-icon-hover-total-width: 360px;
+$hb-icon-hover-total-height: 136px;
+$hb-icon-hover-image: '%icon_background_image';
+$hb-icon-hover: (239px, 68px, -239px, -68px, 16px, 16px, 360px, 136px, '%icon_background_image', 'hb-icon-hover', );
+$hb-icon-name: 'hb-icon';
+$hb-icon-x: 265px;
+$hb-icon-y: 68px;
+$hb-icon-offset-x: -265px;
+$hb-icon-offset-y: -68px;
+$hb-icon-width: 16px;
+$hb-icon-height: 16px;
+$hb-icon-total-width: 360px;
+$hb-icon-total-height: 136px;
+$hb-icon-image: '%icon_background_image';
+$hb-icon: (265px, 68px, -265px, -68px, 16px, 16px, 360px, 136px, '%icon_background_image', 'hb-icon', );
+$hb-logo-name: 'hb-logo';
+$hb-logo-x: 0px;
+$hb-logo-y: 68px;
+$hb-logo-offset-x: 0px;
+$hb-logo-offset-y: -68px;
+$hb-logo-width: 118px;
+$hb-logo-height: 39px;
+$hb-logo-total-width: 360px;
+$hb-logo-total-height: 136px;
+$hb-logo-image: '%icon_background_image';
+$hb-logo: (0px, 68px, 0px, -68px, 118px, 39px, 360px, 136px, '%icon_background_image', 'hb-logo', );
+$hr-bd-name: 'hr-bd';
+$hr-bd-x: 128px;
+$hr-bd-y: 68px;
+$hr-bd-offset-x: -128px;
+$hr-bd-offset-y: -68px;
+$hr-bd-width: 42px;
+$hr-bd-height: 17px;
+$hr-bd-total-width: 360px;
+$hr-bd-total-height: 136px;
+$hr-bd-image: '%icon_background_image';
+$hr-bd: (128px, 68px, -128px, -68px, 42px, 17px, 360px, 136px, '%icon_background_image', 'hr-bd', );
+$bip-fav-name: 'bip-fav';
+$bip-fav-x: 0px;
+$bip-fav-y: 117px;
+$bip-fav-offset-x: 0px;
+$bip-fav-offset-y: -117px;
+$bip-fav-width: 19px;
+$bip-fav-height: 19px;
+$bip-fav-total-width: 360px;
+$bip-fav-total-height: 136px;
+$bip-fav-image: '%icon_background_image';
+$bip-fav: (0px, 117px, 0px, -117px, 19px, 19px, 360px, 136px, '%icon_background_image', 'bip-fav', );
+$bip-read-name: 'bip-read';
+$bip-read-x: 209px;
+$bip-read-y: 68px;
+$bip-read-offset-x: -209px;
+$bip-read-offset-y: -68px;
+$bip-read-width: 20px;
+$bip-read-height: 16px;
+$bip-read-total-width: 360px;
+$bip-read-total-height: 136px;
+$bip-read-image: '%icon_background_image';
+$bip-read: (209px, 68px, -209px, -68px, 20px, 16px, 360px, 136px, '%icon_background_image', 'bip-read', );
+$cb-home-name: 'cb-home';
+$cb-home-x: 180px;
+$cb-home-y: 68px;
+$cb-home-offset-x: -180px;
+$cb-home-offset-y: -68px;
+$cb-home-width: 19px;
+$cb-home-height: 17px;
+$cb-home-total-width: 360px;
+$cb-home-total-height: 136px;
+$cb-home-image: '%icon_background_image';
+$cb-home: (180px, 68px, -180px, -68px, 19px, 17px, 360px, 136px, '%icon_background_image', 'cb-home', );
+$lb-logo-name: 'lb-logo';
+$lb-logo-x: 0px;
+$lb-logo-y: 0px;
+$lb-logo-offset-x: 0px;
+$lb-logo-offset-y: 0px;
+$lb-logo-width: 360px;
+$lb-logo-height: 58px;
+$lb-logo-total-width: 360px;
+$lb-logo-total-height: 136px;
+$lb-logo-image: '%icon_background_image';
+$lb-logo: (0px, 0px, 0px, 0px, 360px, 58px, 360px, 136px, '%icon_background_image', 'lb-logo', );
+$lb-ok-name: 'lb-ok';
+$lb-ok-x: 29px;
+$lb-ok-y: 117px;
+$lb-ok-offset-x: -29px;
+$lb-ok-offset-y: -117px;
+$lb-ok-width: 17px;
+$lb-ok-height: 17px;
+$lb-ok-total-width: 360px;
+$lb-ok-total-height: 136px;
+$lb-ok-image: '%icon_background_image';
+$lb-ok: (29px, 117px, -29px, -117px, 17px, 17px, 360px, 136px, '%icon_background_image', 'lb-ok', );
+$nb-all-name: 'nb-all';
+$nb-all-x: 291px;
+$nb-all-y: 68px;
+$nb-all-offset-x: -291px;
+$nb-all-offset-y: -68px;
+$nb-all-width: 15px;
+$nb-all-height: 15px;
+$nb-all-total-width: 360px;
+$nb-all-total-height: 136px;
+$nb-all-image: '%icon_background_image';
+$nb-all: (291px, 68px, -291px, -68px, 15px, 15px, 360px, 136px, '%icon_background_image', 'nb-all', );
+$spritesheet-width: 360px;
+$spritesheet-height: 136px;
+$spritesheet-image: '%icon_background_image';
+$spritesheet-sprites: ($hb-icon-hover, $hb-icon, $hb-logo, $hr-bd, $bip-fav, $bip-read, $cb-home, $lb-logo, $lb-ok, $nb-all, );
+$spritesheet: (360px, 136px, '%icon_background_image', $spritesheet-sprites, );
+
+// The provided mixins are intended to be used with the array-like variables
+//
+// .icon-home {
+//   @include sprite-width($icon-home);
+// }
+//
+// .icon-email {
+//   @include sprite($icon-email);
+// }
+//
+// Example usage in HTML:
+//
+// `display: block` sprite:
+// <div class="icon-home"></div>
+//
+// To change `display` (e.g. `display: inline-block;`), we suggest using a common CSS class:
+//
+// // CSS
+// .icon {
+//   display: inline-block;
+// }
+//
+// // HTML
+// <i class="icon icon-home"></i>
+@mixin sprite-width($sprite) {
+  width: nth($sprite, 5);
+}
+
+@mixin sprite-height($sprite) {
+  height: nth($sprite, 6);
+}
+
+@mixin sprite-position($sprite) {
+  $sprite-offset-x: nth($sprite, 3);
+  $sprite-offset-y: nth($sprite, 4);
+  background-position: $sprite-offset-x  $sprite-offset-y;
+}
+
+@mixin sprite-image($sprite) {
+  $sprite-image: nth($sprite, 9);
+  @extend #{$sprite-image};
+}
+
+@mixin sprite($sprite) {
+  @include sprite-image($sprite);
+  @include sprite-position($sprite);
+  @include sprite-width($sprite);
+  @include sprite-height($sprite);
+}
+
+// The `sprites` mixin generates identical output to the CSS template
+//   but can be overridden inside of SCSS
+//
+// @include sprites($spritesheet-sprites);
+@mixin sprites($sprites) {
+  @each $sprite in $sprites {
+    $sprite-name: nth($sprite, 10);
+    .#{$sprite-name} {
+      @include sprite($sprite);
+    }
+  }
+}

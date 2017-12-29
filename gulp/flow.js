@@ -1,39 +1,75 @@
 const glob = require('glob');
 const _ = require('lodash');
 const path = require('path');
+const gulp = require('gulp');
+const $ = require('gulp-load-plugins')();
 
 const util = require('./util');
 const cache = require('./cache');
 const defaultConfig = require('./config');
+const log = require('./log');
 
 class WorkFlow{
 	constructor(){
 		this.interfaces = {};
 		this.compiler = [];
-		this.patterns = [];
 		this.cache = cache;
 		this.defaultConfig = defaultConfig;
 		this.util = util;
+		this.log = log;
 	}
 	async init(){
 		// 加载编译文件
 		await this.loadCompileFile();
+		log.debug('加载接口文件完成.', true);
 		// run beforeBegin
-		await this.runInterface('beforeBegin');
+		log.debug('开始执行beforeBegin接口.', true);
+		let paths = await this.runInterface('beforeBegin');
+		paths = _.flatten(paths.filter(v => v != null), true)
+			.map(v => path.join(defaultConfig.sourcePath, v));
+		log.debug(`执行beforeBegin接口结束，gulp.src开始扫描以下文件路径\n${paths.join('\n')}`, true);
+		let stream = gulp.src(paths, {base: defaultConfig.sourcePath, nodir: true});
 		// run afterBegin
-		await this.runInterface('afterBegin');
+		log.debug('扫描文件结束，开始执行afterBegin接口.', true);
+		let plugins = await this.runInterface('afterBegin');
+		_.flatten(plugins, true).filter(v => !!v).forEach(plugin => {
+			stream = stream.pipe(plugin);
+		});
+		// 等待所有文件都完成后，在进入beginEnd
+		await new Promise(resolve => stream.on('finish', resolve));
 		// run beforeEnd
-		await this.runInterface('beforeEnd');
-		// run afterEnd
+		log.debug('执行afterBegin接口结束，开始执行beforeEnd接口.', true);
+		plugins = await this.runInterface('beforeEnd');
+		_.flatten(plugins, true).filter(v => !!v).forEach(plugin => {
+			stream = stream.pipe(plugin);
+		});
+		if (defaultConfig.debug) {
+			let files = [];
+			stream = stream.pipe(util.createPlugin((file, enc, next) => {
+				files.push(file.path);
+				next(null, file);
+			}, next => {
+				log.debug(`执行beforeEnd接口结束，gulp.dest开始存储以下文件\n${files.join('\n')}`, true);
+				next(null);
+			}))
+		}
+		await new Promise(resolve => {
+			stream.pipe(gulp.dest(defaultConfig.outputPath))
+				.on('finish', async () => {
+					// run afterEnd
+					log.debug('存储文件结束，开始执行afterEnd接口.', true);
+					resolve();
+				});
+		});
 		await this.runInterface('afterEnd');
 	}
-	async runInterface(name){
+	async runInterface(name, ...args){
 		const {compiler, interfaces} = this;
-		return Promise.all(interfaces[name].map(idx => compiler[idx][name].call(this)));
+		return Promise.all(interfaces[name].map(idx => compiler[idx][name].apply(this, args)));
 	}
 	async loadCompileFile(){
 		const files = await this.getCompileFiles();
-		const compiler = _.flattenDeep(files).map(filepath => {
+		const compiler = _.flatten(files, true).map(filepath => {
 			let module = require(util.getRelativeRoot(filepath));
 			if (typeof module === 'function') {
 				module = module(this);
@@ -47,7 +83,6 @@ class WorkFlow{
 		this.compiler = compiler;
 
 		const interfaces = this.interfaces;
-		const patterns = [];
 		compiler.forEach((c, i) => {
 			['beforeBegin',
 			'afterBegin',
@@ -60,11 +95,7 @@ class WorkFlow{
 					interfaces[name].push(i);
 				}
 			});
-			if (Array.isArray(c.pattern)) {
-				patterns.push(c.pattern);
-			}
 		});
-		this.patterns = _.flattenDeep(patterns);
 	}
 	async getCompileFiles(){
 		const getDefaultCompileFiles = () => new Promise((resolve, reject) => {		

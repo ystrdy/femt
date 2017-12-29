@@ -6,7 +6,7 @@
 }
 
 .lb-logo{
-	@include sprite($lb-logo-sprite);
+	@include sprite($lb-logo);
 	margin-top: 19px;
 	@extend %txtnone;
 	@extend %fl;
@@ -58,8 +58,8 @@
 		@extend %pa;
 		left: 50%;
 		top: 50%;
-		@include sprite($lb-ok-sprite);
-		margin-left: nth($lb-ok-sprite, 5) / -2;
-		margin-top: nth($lb-ok-sprite, 6) / -2;
+		@include sprite($lb-ok);
+		margin-left: nth($lb-ok, 5) / -2;
+		margin-top: nth($lb-ok, 6) / -2;
 	}
 }

@@ -617,8 +617,8 @@ a{
 			@extend %pa;
 			right: 20px;
 			top: 50%;
-			@include sprite($rn-bd-sprite);
-			margin-top: nth($rn-bd-sprite, 6) / -2;
+			@include sprite($rn-bd);
+			margin-top: nth($rn-bd, 6) / -2;
 		}
 	}
 	dd{
@@ -633,7 +633,7 @@ a{
 	}
 	.show{
 		dt i{
-			@include sprite-position($rn-bd-show-sprite);
+			@include sprite-position($rn-bd-show);
 		}
 		dd{
 			@extend %db;
@@ -745,8 +745,8 @@ a{
 		@extend %pa;
 		left: 22px;
 		top: 50%;
-		@include sprite($rb-more-sprite);
-		margin-top: nth($rb-more-sprite, 6) / -2;
+		@include sprite($rb-more);
+		margin-top: nth($rb-more, 6) / -2;
 	}
 }
 
@@ -850,8 +850,8 @@ a{
 			color: #c31919;
 		}
 		&:before{
-			@include sprite($hr-bd-sprite);
-			margin-top: nth($hr-bd-sprite, 6) / -2;
+			@include sprite($hr-bd);
+			margin-top: nth($hr-bd, 6) / -2;
 		}
 	}
 }
@@ -1018,7 +1018,7 @@ a{
 
 .hb-logo{
 	@extend %fl;
-	@include sprite($hb-logo-sprite);
+	@include sprite($hb-logo);
 	@extend %fnone;
 	margin-top: 6px;
 	a{
@@ -1071,7 +1071,7 @@ a{
 		}
 		.hb-icon{
 			i{
-				@include sprite-position($hb-icon-hover-sprite);
+				@include sprite-position($hb-icon-hover);
 			}
 		}
 		.hb-ok{
@@ -1120,9 +1120,9 @@ a{
 		@extend %pa;
 		left: 50%;
 		top: 50%;
-		@include sprite($hb-icon-sprite);
-		margin-left: nth($hb-icon-sprite, 5) / -2;
-		margin-top: nth($hb-icon-sprite, 6) / -2;
+		@include sprite($hb-icon);
+		margin-left: nth($hb-icon, 5) / -2;
+		margin-top: nth($hb-icon, 6) / -2;
 	}
 }
 
@@ -1242,8 +1242,8 @@ a{
 		@extend %content;
 		@extend %dib;
 		@extend %vat;
-		@include sprite($qs-write-sprite);
-		margin-top: (32px - nth($qs-write-sprite, 6)) / 2;
+		@include sprite($qs-write);
+		margin-top: (32px - nth($qs-write, 6)) / 2;
 		margin-right: 7px;
 	}
 }
@@ -1267,22 +1267,22 @@ a{
 .qs-commet{
 	margin-left: 16px;
 	&:before{
-		@include sprite($qs-commet-sprite);
-		margin-top: (20px - nth($qs-commet-sprite, 6)) / 2 - 1px;
+		@include sprite($qs-commet);
+		margin-top: (20px - nth($qs-commet, 6)) / 2 - 1px;
 	}
 }
 
 .qs-share{
 	&:before{
-		@include sprite($qs-share-sprite);
-		margin-top: (20px - nth($qs-share-sprite, 6)) / 2;
+		@include sprite($qs-share);
+		margin-top: (20px - nth($qs-share, 6)) / 2;
 	}
 }
 
 .qs-more{
 	&:before{
-		@include sprite($qs-more-sprite);
-		margin-top: (20px - nth($qs-more-sprite, 6)) / 2;
+		@include sprite($qs-more);
+		margin-top: (20px - nth($qs-more, 6)) / 2;
 		margin-right: 0;
 	}
 }
@@ -1302,8 +1302,8 @@ a{
 	i{
 		@extend %dib;
 		@extend %vat;
-		@include sprite($qs-expand-sprite);
-		margin-top: (20px - nth($qs-expand-sprite, 6)) / 2;
+		@include sprite($qs-expand);
+		margin-top: (20px - nth($qs-expand, 6)) / 2;
 		margin-left: 6px;
 	}
 	&.cur{
@@ -1314,7 +1314,7 @@ a{
 			@extend %di;
 		}
 		i{
-			@include sprite-position($qs-expand-cur-sprite);
+			@include sprite-position($qs-expand-cur);
 		}
 	}
 }

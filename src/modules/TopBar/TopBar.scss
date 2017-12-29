@@ -54,28 +54,28 @@
 
 .tb-home{
 	&:after{
-		@include sprite($tb-home-sprite);
-		margin-top: nth($tb-home-sprite, 6) / -2;
+		@include sprite($tb-home);
+		margin-top: nth($tb-home, 6) / -2;
 	}
 }
 
 .tb-category{
 	&:after{
-		@include sprite($tb-category-sprite);
-		margin-top: nth($tb-category-sprite, 6) / -2;
+		@include sprite($tb-category);
+		margin-top: nth($tb-category, 6) / -2;
 	}
 }
 
 .tb-mobile{
 	&:after{
-		@include sprite($tb-mobile-sprite);
-		margin-top: nth($tb-mobile-sprite, 6) / -2;
+		@include sprite($tb-mobile);
+		margin-top: nth($tb-mobile, 6) / -2;
 	}
 }
 
 .tb-newest{
 	&:after{
-		@include sprite($tb-newest-sprite);
-		margin-top: nth($tb-newest-sprite, 6) / -2;
+		@include sprite($tb-newest);
+		margin-top: nth($tb-newest, 6) / -2;
 	}
 }

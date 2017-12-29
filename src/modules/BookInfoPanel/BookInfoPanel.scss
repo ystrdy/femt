@@ -1,0 +1,119 @@
+.book-info-panel{
+	width: $container-width - 2px;
+	height: 236px;
+	border: solid 1px #f0f0f0;
+	margin-top: 20px;
+	@extend %ma;
+	@extend %oh;
+}
+
+.bip-cover{
+	@extend %fl;
+	box-shadow: 0 0 6px rgba(0,0,0,.35);
+	margin-top: 20px;
+	margin-left: 20px;
+	&, img{
+		width: 144px;
+		height: 192px;
+	}
+}
+
+.bip-content{
+	@extend %fl;
+	margin-left: 24px;
+	width: 830px;
+}
+
+.bip-title{
+	@include line(56px);
+	margin-top: 11px;
+	@extend %fwn;
+	b{
+		font-size: 36px;
+		@extend %c0;
+	}
+	i{
+		margin-left: 16px;
+		margin-right: 9px;
+	}
+}
+
+.bip-intro{
+	line-height: 24px;
+}
+
+.bip-status{
+	@include line(24px);
+	li{
+		@extend %fl;
+		margin-right: 14px;
+	}
+	i{
+		@extend %fwb;
+	}
+	a{
+		color: #288be0;
+		@extend %tdu;
+	}
+}
+
+.bip-buttons{
+	margin-top: 26px;
+}
+
+.bip-read, .bip-fav{
+	@extend %fl;
+	height: 44px;
+	@extend %tac;
+	border-radius: 22px;
+	@extend %f0;
+	margin-right: 10px;
+	&:before, i, span{
+		@extend %dib;
+		@extend %vam;
+	}
+	&:before{
+		@extend %content;
+		width: 0;
+		height: 100%;
+	}
+	span{
+		@extend %f14;
+		margin-left: 6px;
+	}
+}
+
+.bip-read{
+	width: 200px;
+	background: #ff2852;
+	@extend %cfff;
+	i{
+		@include sprite($bip-read);
+		margin-top: 1px;
+	}
+}
+
+.bip-fav{
+	width: 112px;
+	background: #FFDF6C;
+	color: #5f1516;
+	i{
+		@include sprite($bip-fav);
+		margin-top: -2px;
+	}
+}
+
+.bip-qrcode{
+	@extend %fr;
+	@extend %tac;
+	margin-right: 9px;
+	margin-top: 12px;
+	img{
+		@extend %db;
+		width: 144px;
+	}
+	p{
+		@extend %f12;
+		@extend %c6;
+	}
+}

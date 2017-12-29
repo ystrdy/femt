@@ -1,6 +1,6 @@
 const WorkFlow = require('./flow');
 
 module.exports = async function(){
-	process.env.PRODUCT = true;
+	process.env.PRODUCTION = true;
 	await new WorkFlow().init();
 };
