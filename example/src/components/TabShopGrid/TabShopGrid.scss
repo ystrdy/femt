@@ -1,0 +1,17 @@
+.tab-shop-grid{
+    ul{
+        clear: fix;
+        padding-top: 15px;
+    }
+    li{
+        float: left;
+        padding-bottom: 15px;
+        padding-left: 15px;
+    }
+    li, a, img{
+        width: 332px;
+    }
+    a, img{
+        display: block;
+    }
+}

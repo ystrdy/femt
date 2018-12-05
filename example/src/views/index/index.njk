@@ -1,0 +1,24 @@
+{% extends "../../components/Common/Common.njk" %}
+
+{% block style %}
+{{ super() }}
+<link rel="stylesheet" href="css/index.css" inline>
+{% endblock %}
+
+{% block container %}
+<div class="index-container">
+    {% include "../../components/Loading/Loading.njk" %}
+    {# {% include "../../components/IndexTabs/IndexTabs.njk" %} #}
+    {# {% include "../../components/NetworkError/NetworkError.njk" %} #}
+</div>
+{# {% include "../../components/TabShopGrid/TabShopGrid.njk" %} #}
+{# {% include "../../components/TabGameStyle/TabGameStyle.njk" %} #}
+{# {% include "../../components/TabDiscountCoupon/TabDiscountCoupon.njk" %} #}
+{# {% include "../../components/TabShopCarousel/TabShopCarousel.njk" %} #}
+{# {% include "../../components/SplashAD/SplashAD.njk" %} #}
+{% endblock %}
+
+{% block script %}
+{{ super() }}
+<script src="js/index.js" inline></script>
+{% endblock%}

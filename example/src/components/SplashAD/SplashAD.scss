@@ -1,0 +1,51 @@
+.sa-large{
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    z-index: 9;
+    width: 100%;
+    a, img{
+        display: block;
+    }
+}
+
+.sa-close{
+    position: absolute;
+    top: 0;
+    right: 15px;
+    background: url(../../sprites/i31.png) no-repeat 0 0;
+    width: image-width;
+    height: image-height;
+    cursor: pointer;
+    &:hover{
+        background-image: url(../../sprites/i31_h.png);
+    }
+}
+
+.sa-small{
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    &, img{
+        width: 88px;
+        height: 105px;
+    }
+    span{
+        position: absolute;
+        top: -13px;
+        right: 4px;
+        background: url(../../sprites/i32.png) no-repeat 0 0;
+        width: image-width;
+        height: image-height;
+        cursor: pointer;
+        &:hover{
+            background-image: url(../../sprites/i32_h.png);
+        }
+    }
+}
+
+.sa-widget360{
+    position: absolute;
+    left: 4px;
+    bottom: 0;
+}

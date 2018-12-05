@@ -1,0 +1,39 @@
+@import "../../components/Common/Common.scss";
+@import "../../components/Loading/Loading.scss";
+
+html, body{
+    height: 100%;
+    overflow: hidden;
+}
+
+.skin-container{
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    position: relative;
+}
+
+.sc-body{
+    position: absolute;
+    a, img{
+        display: block;
+    }
+    &.interface360{
+        width: 800px;
+        height: 150px;
+        overflow: hidden;
+        img{
+            width: 1088px;
+            height: 875px;
+            margin-left: -144px;
+        }
+        i{
+            position: absolute;
+            right: 0;
+            bottom: 0;
+            background: url(../../sprites/i35.png) no-repeat 0 0;
+            width: image-width;
+            height: image-height;
+        }
+    }
+}

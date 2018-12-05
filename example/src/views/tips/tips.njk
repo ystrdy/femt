@@ -1,0 +1,34 @@
+{% extends "../../components/Common/Common.njk" %}
+
+{% block style %}
+{{ super() }}
+<link rel="stylesheet" href="css/tips.css" inline>
+{% endblock %}
+
+{% block container %}
+<div class="tips-container">
+    {# {% include "../../components/Loading/Loading.njk" %} #}
+    <div class="single-news">
+        <div class="sn-head">
+            <h2>FF新鲜事-Flash助手推荐</h2>
+            <span class="sn-close"></span>
+            <span class="sn-no-longer">不再弹出</span>
+        </div>
+        <div class="sn-body">
+            <a href="//mini.eastday.com/a/n181120170409790.html?qid=03412" class="sn-content" data-count-click="{&quot;category&quot;:-1,&quot;type&quot;:4,&quot;id&quot;:595,&quot;channelId&quot;:1}">
+                <img src="//cos.flash.2144.com/images/36fddde992614b791a6292d1c4cb37ea.jpg">
+                <h1>上交所重罚赵薇、黄有龙夫妇！<br>5年内不适合担任上市公司董监高</h1>
+            </a>
+            <a href="//mini.eastday.com/a/n181120170409790.html?qid=03412" class="sn-go" data-count-click="{&quot;category&quot;:-1,&quot;type&quot;:4,&quot;id&quot;:595,&quot;channelId&quot;:1}">查看详情</a>
+        </div>
+    </div>
+</div>
+{# {% include "../../components/TipsNewsList/TipsNewsList.njk" %} #}
+{# {% include "../../components/TipsFullImage/TipsFullImage.njk" %} #}
+{# {% include "../../components/TipsNetworkError/TipsNetworkError.njk" %} #}
+{% endblock %}
+
+{% block script %}
+{{ super() }}
+<script src="js/tips.js" inline></script>
+{% endblock%}

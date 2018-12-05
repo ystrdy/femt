@@ -1,0 +1,27 @@
+.network-error{
+    position: absolute 0 0;
+    background: #fff;
+    overflow: hidden;
+    span, i{
+        position: relative;
+        top: 28.8%;
+    }
+    i{
+        display: block;
+        background: url(../../sprites/i2.png) no-repeat 0 0;
+        width: image-width;
+        height: image-height;
+        margin: 0 auto;
+    }
+    span{
+        display: block;
+        background: url(../../sprites/i3.png) no-repeat 0 0;
+        width: image-width;
+        height: image-height;
+        margin: 22px auto 0;
+        cursor: pointer;
+        &:hover{
+            background-image: url(../../sprites/i4.png);
+        }
+    }
+}

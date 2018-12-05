@@ -1,0 +1,22 @@
+html{-webkit-font-smoothing:antialiased}
+body,h1,h2,h3,h4,h5,h6,p,dl,dt,dd,ul,ol,li,form,button,input,textarea,th,td{margin:0;padding:0}
+body,button,input,select,textarea{font:14px \5FAE\8F6F\96C5\9ED1,"Hiragino Sans GB","Hiragino Sans GB W3",arial,\5b8b\4f53}
+body{color:#333;background: #fff;}
+h1,h2,h3,h4,h5,h6{font-size:100%}
+cite,em,var,i{font-style:normal}
+form{display:inline}
+small{font-size:12px}
+ul,ol{list-style:none}
+a{
+    text-decoration:none;
+    color:#333;
+    *blur:expression(this.onFocus=this.blur());     /* stylelint-disable-line */
+    outline-style:none;
+}
+sup{vertical-align:text-top}
+sub{vertical-align:text-bottom}
+img{vertical-align:top;border:none 0;-ms-interpolation-mode:bicubic}
+button,input,select,textarea{font-size:100%;outline:none}
+table{border-collapse:collapse;border-spacing:0}
+textarea{resize:none}
+.hidden{display:none}

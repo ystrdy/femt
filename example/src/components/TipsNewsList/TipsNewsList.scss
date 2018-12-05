@@ -1,0 +1,145 @@
+.news-list{
+    width: 320px;
+    height: 386px;
+    overflow: hidden;
+    position: relative;
+    background: #fff;
+}
+
+.nl-head{
+    height: 28px;
+    line-height: 28px;
+    overflow: hidden;
+    background: #fdfdfd;
+    h2{
+        float: left;
+        margin-left: 8px;
+        color: #999;
+        font-weight: normal;
+        font-size: 12px;
+    }
+}
+
+.nl-no-longer{
+    float: right;
+    font-size: 12px;
+    color: #999;
+    text-decoration: underline;
+    line-height: 14px;
+    margin-top: 7px;
+    margin-right: 6px;
+    cursor: pointer;
+    &:hover{
+        color: #666;
+    }
+}
+
+.nl-close{
+    float: right;
+    background: url(../../sprites/i33.png) no-repeat 0 0;
+    width: image-width;
+    height: image-height;
+    margin-top: 2px;
+    margin-right: 2px;
+    cursor: pointer;
+    &:hover{
+        background-image: url(../../sprites/i33_h.png)
+    }
+    &:active{
+        background-image: url(../../sprites/i33_d.png)
+    }
+}
+
+.nl-body{
+    border-top: solid 1px #ededed;
+    overflow: hidden;
+}
+
+.nl-list{
+    margin-top: -1px;
+}
+
+.nl-single, .nl-group{
+    overflow: hidden;
+    position: relative;
+    margin-left: 2px;
+    margin-right: 2px;
+    a{
+        display: block;
+        margin-left: 10px;
+        margin-right: 10px;
+        height: 100%;;
+        border-top: solid 1px #f0f0f0;
+    }
+    &:hover{
+        background-color: #F7F4F4;
+    }
+}
+
+.nl-single{
+    height: 79px;
+    a{
+        position: relative;
+        padding-right: 112px;
+    }
+    .nl-title{
+        height: 40px;
+        margin-top: 12px;
+    }
+    .nl-pics{
+        position: absolute;
+        right: 0;
+        top: 10px;
+        cursor: pointer;
+        &, img{
+            width: 94px;
+            height: 58px;
+        }
+    }
+    .nl-info{
+        margin-top: 3px;
+    }
+}
+
+.nl-group{
+    height: 120px;
+    .nl-title{
+        height: 20px;
+        margin-top: 7px;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+    }
+    .nl-pics{
+        margin-top: 5px;
+        height: 58px;
+        overflow: hidden;
+        margin-right: -7px;
+        cursor: pointer;
+        img{
+            width: 94px;
+            height: 58px;
+            float: left;
+            margin-right: 7px;
+        }
+    }
+    .nl-info{
+        margin-top: 5px;
+    }
+}
+
+.nl-title{
+    color: #333;
+    font-weight: normal;
+    line-height: 20px;
+    overflow: hidden;
+    cursor: pointer;
+}
+
+.nl-info{
+    height: 16px;    
+    line-height: 16px;
+    overflow: hidden;
+    font-size: 12px;
+    color: #ccc;
+    cursor: pointer;
+}

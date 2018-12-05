@@ -1,0 +1,32 @@
+{
+  "name": "femt",
+  "version": "2.0.0",
+  "description": "2144 team for front end modular tool",
+  "scripts": {
+    "start": "tsc --watch",
+    "lint": "eslint src --ext .ts",
+    "clean": "rimraf dist",
+    "build": "npm run clean && tsc",
+    "precommit": "npm run lint"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/ystrdy/femt.git"
+  },
+  "author": "ystrdy <xu1930@qq.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/ystrdy/femt/issues"
+  },
+  "homepage": "https://github.com/ystrdy/femt#readme",
+  "dependencies": {
+    "babel-eslint": "^10.0.1",
+    "eslint": "^5.9.0",
+    "eslint-config-alloy": "^1.4.2",
+    "eslint-plugin-typescript": "^0.14.0",
+    "husky": "^1.2.0",
+    "rimraf": "^2.6.2",
+    "typescript": "^3.1.1",
+    "typescript-eslint-parser": "^21.0.2"
+  }
+}

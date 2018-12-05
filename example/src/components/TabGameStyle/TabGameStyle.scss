@@ -1,0 +1,330 @@
+.tab-game-style{
+    padding: 5px 15px 0 15px;
+    clear: fix;
+}
+
+.tab-gs-title{
+    height: 36px;
+    line-height: 36px;
+    overflow: hidden;
+    & > h3{
+        float: left;
+        padding-left: 10px;
+        font-size: 16px;
+        font-weight: normal;
+        position: relative;
+        i{
+            position: absolute;
+            left: 0;
+            top: 50%;
+            margin-top: -7px;
+            background: url(../../sprites/i7.png) no-repeat 0 0;
+            width: image-width;
+            height: image-height;
+        }
+    }
+}
+
+.tab-gs-atlas-news{
+    float: left;
+    width: 404px;
+    overflow: hidden;
+}
+
+.tab-gs-an-carousel{
+    height: 188px;
+}
+
+.tab-gs-an-view{
+    width: 404px;
+    height: 186px;
+    overflow: hidden;
+    position: relative;
+    ul{
+        width: 10000em;         // 插件要求，给个足够大的宽度
+        position: relative;
+    }
+    li, img{
+        width: 404px;
+        height: 186px;
+    }
+    li{
+        float: left;
+        position: relative;
+    }
+    a * {
+        cursor: pointer;
+    }
+    h3{
+        position: absolute;
+        left: 0;
+        bottom: 0;
+        width: 100%;
+        height: 24px;
+        line-height: 24px;
+        overflow: hidden;
+        color: #fff;
+        font-weight: normal;
+        text-indent: 6px;
+        background: rgba(0, 0, 0, 0.4);
+    }
+    &.hover{
+        .tab-gs-an-prev{
+            left: 0;
+        }
+        .tab-gs-an-next{
+            right: 0;
+        }
+    }
+}
+
+.tab-gs-an-arrow{
+    width: 404px;
+    height: 186px;
+    position: relative;
+}
+
+.tab-gs-an-prev, .tab-gs-an-next{
+    width: 30px;
+    height: 58px;
+    position: absolute;
+    top: 50%;
+    margin-top: -29px;
+    cursor: pointer;
+}
+
+.tab-gs-an-prev{
+    left: -30px;
+    background: url(../../sprites/i8.png) no-repeat 0 0;
+    transition: left 200ms 100ms;
+    &:hover{
+        background: url(../../sprites/i8_h.png) no-repeat 0 0;
+    }
+}
+
+.tab-gs-an-next{
+    right: -30px;
+    background: url(../../sprites/i9.png) no-repeat 0 0;
+    transition: right 200ms 100ms;
+    &:hover{
+        background: url(../../sprites/i9_h.png) no-repeat 0 0;
+    }
+}
+
+.tab-gs-an-anchor{
+    width: 100%;
+    height: 2px;
+    background: #999;
+    overflow: hidden;
+    span{
+        float: left;
+        height: 100%;
+        &.cur{
+            background-color: #F13535;
+        }
+    }
+}
+
+.tab-gs-an-list{
+    margin-top: 5px;
+    li{
+        border-top: solid 1px #f0f0f0;
+        &:first-child{
+            border-top: 0;
+        }
+    }
+    a{
+        display: block;
+        height: 68px;
+        padding-left: 95px;
+        overflow: hidden;
+        position: relative;
+        &:hover{
+            p{
+                color: #f13535;
+            }
+        }
+        * {
+            cursor: pointer;
+        }
+    }
+    img{
+        position: absolute;
+        left: 0;
+        top: 10px;
+        width: 86px;
+        height: 48px;
+    }
+    P{
+        max-height: 40px;
+        line-height: 20px;
+        overflow: hidden;
+        margin-top: 8px;
+    }
+}
+
+.tab-gs-flash-game{
+    float: right;
+    width: 250px;
+}
+
+.tab-gs-fg-container{
+    background: #fafafa;
+    border: solid 1px #f0f0f0;
+    padding: 0 15px 12px;
+    overflow: hidden;
+}
+
+.tab-gs-fg-match{
+    margin-top: 16px;
+    a{
+        display: block;
+        height: 82px;
+        padding-left: 97px;
+        position: relative;
+        overflow: hidden;
+        * {
+            cursor: pointer;
+        }
+        &:hover{
+            h3{
+               color: #f13535; 
+            }
+        }
+    }
+    h3{
+        height: 16px;
+        line-height: 16px;
+        overflow: hidden;
+        padding-top: 8px;
+    }
+    p{
+        height: 16px;
+        line-height: 16px;
+        overflow: hidden;
+        color: #999;
+        padding-top: 8px;
+    }
+}
+
+.tab-gs-fg-m-pic{
+    position: absolute;
+    left: 0;
+    top: 0;
+    border-radius: 12px;
+    overflow: hidden;
+    &, img{
+        width: 82px;
+        height: 82px;
+    }
+    i{
+        position: absolute;
+        left: 0;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        background: url(../../sprites/i10.png) no-repeat 0 0;
+    }
+}
+
+.tab-gs-fg-m-status{
+    padding-top: 8px;
+    height: 19px;
+    line-height: 19px;
+    span{
+        float: left;
+        position: relative;
+        color: #fff;
+        background-color: #54cb4e;
+        font-size: 12px;
+        padding: 0 4px;
+        margin-right: 10px;
+    }
+    i{
+        position: absolute;
+        left: 100%;
+        top: 0;
+        background: url(../../sprites/i11.png) no-repeat 0 0;
+        width: image-width;
+        height: image-height;
+    }
+}
+
+.tab-gs-fg-list{
+    li{
+        margin-top: 15px;
+        *zoom: 1;
+    }
+    a{
+        display: block;
+        height: 54px;
+        padding-left: 66px;
+        overflow: hidden;
+        position: relative;
+        * {
+            cursor: pointer;
+        }
+        &:hover{
+            h3{
+               color: #f13535; 
+            }
+        }
+    }
+    h3{
+        height: 24px;
+        line-height: 24px;
+        overflow: hidden;
+        span{
+            float: left;
+        }
+        i{
+            float: left;
+            margin-top: 7px;
+            margin-left: 4px;
+            background: url(../../sprites/i12.png) no-repeat 0 0;
+            width: image-width;
+            height: image-height;
+        }
+    }
+    p{
+        height: 19px;
+        line-height: 19px;
+        overflow: hidden;
+        color: #666;
+        font-size: 12px;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+    }
+}
+
+.tab-gs-fg-l-con{
+    margin-top: -5px;
+}
+
+.tab-gs-fg-l-hots{
+    height: 19px;
+    line-height: 19px;
+    overflow: hidden;
+    color: #999;
+    font-size: 12px;
+}
+
+.tab-gs-fg-l-pic{
+    position: absolute;
+    left: 0;
+    top: 0;
+    border-radius: 8px;
+    overflow: hidden;
+    &, img{
+        width: 54px;
+        height: 54px;
+    }
+    i{
+        position: absolute;
+        left: 0;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        background: url(../../sprites/i13.png) no-repeat 0 0;
+    }
+}

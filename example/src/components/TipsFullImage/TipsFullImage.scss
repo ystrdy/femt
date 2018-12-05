@@ -1,0 +1,59 @@
+.full-image{
+    position: absolute;
+    background: #fff;
+}
+
+.fi-head{
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 28px;
+    line-height: 28px;
+    overflow: hidden;
+    h2{
+        float: left;
+        margin-left: 8px;
+        color: #ffffff;
+        font-weight: normal;
+        font-size: 12px;
+        opacity: .7;
+    }
+}
+
+.fi-no-longer{
+    float: right;
+    font-size: 12px;
+    color: #fff;
+    text-decoration: underline;
+    line-height: 14px;
+    margin-top: 7px;
+    margin-right: 6px;
+    cursor: pointer;
+    opacity: .7;
+    .cur{
+        opacity: 1;
+    }
+}
+
+.fi-close{
+    float: right;
+    background: url(../../sprites/i34.png) no-repeat 0 0;
+    width: image-width;
+    height: image-height;
+    margin-top: 2px;
+    margin-right: 2px;
+    cursor: pointer;
+    &:hover{
+        background-image: url(../../sprites/i34_h.png)
+    }
+    &:active{
+        background-image: url(../../sprites/i34_d.png)
+    }
+}
+
+.fi-body{
+    a, img{
+        display: block;
+    }
+}

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="renderer" content="webkit">
+    <title>FFNews</title>
+    {% block style %}{% endblock %}
+    <base target="_blank">
+</head>
+<body onselectstart="return false;">
+    {% block container %}{% endblock %}
+    {% block script %}
+    <script src="js/common.js"></script>
+    {% endblock %}
+    <div class="hidden">
+        {% block statistic %}
+        <script>
+        var _hmt = _hmt || [];
+        (function() {
+        var hm = document.createElement("script");
+        hm.src = "//hm.baidu.com/hm.js?ac8848dc06687b4e8936029238c24f9d";
+        var s = document.getElementsByTagName("script")[0]; 
+        s.parentNode.insertBefore(hm, s);
+        })();
+        </script>
+        {% endblock %}
+    </div>
+</body>
+</html>

@@ -1,0 +1,168 @@
+@import "../ShopQRCode/ShopQRCode.scss";
+
+.tab-sp-main{
+    float: left;
+    padding-left: 15px;
+    padding-top: 15px;
+}
+
+.tab-sp-aside{
+    float: right;
+    padding-top: 15px;
+    padding-right: 15px;
+}
+
+.tab-sp-carousel{
+    width: 512px;
+    height: 276px;
+    overflow: hidden;
+    position: relative;
+    &:hover{
+        .tab-sp-prev{
+            left: 0;
+        }
+        .tab-sp-next{
+            right: 0;
+        }
+    }
+}
+
+.tab-sp-view{
+    overflow: hidden;
+    position: relative;
+    &, li, a, img{
+        width: 512px;
+        height: 276px;
+    }
+    a, img{
+        display: block;
+    }
+    ul{
+        width: 10000em;
+        position: relative;
+    }
+    li{
+        float: left;
+    }
+}
+
+.tab-sp-prev, .tab-sp-next{
+    position: absolute;
+    top: 50%;
+    z-index: 1;
+    width: 20px;
+    height: 32px;
+    margin-top: -16px;
+    cursor: pointer;
+}
+
+.tab-sp-prev{
+    left: -20px;
+    background: url(../../sprites/i20.png) no-repeat 0 0;
+    &:hover{
+        background: url(../../sprites/i20_h.png) no-repeat 0 0;
+    }
+}
+
+.tab-sp-next{
+    right: -20px;
+    background: url(../../sprites/i21.png) no-repeat 0 0;
+    &:hover{
+        background: url(../../sprites/i21_h.png) no-repeat 0 0;
+    }
+}
+
+.tab-sp-dots{
+    width: 100%;
+    height: 0;
+    font-size: 0;
+    position: absolute;
+    left: 0;
+    bottom: 22px;
+    z-index: 1;
+    text-align: center;
+    .inner, a{
+        display: inline-block;
+        vertical-align: top;
+    }
+    .inner{
+        background: url(../../sprites/i22.png) no-repeat 0 0;        
+        height: image-height;
+    }
+    a{
+        width: 14px;
+        height: 4px;
+        background-color: #fff;
+        margin: 4px 5px 4px 0;
+        color: transparent;
+        line-height: 99em;
+        overflow: hidden;
+        &:first-child{
+            margin-left: 5px;
+        }
+        &.cur{
+            background-color: #ff5000;
+        }
+    }
+}
+
+.tab-sp-hd{
+    margin-top: 7px;
+    height: 22px;
+    line-height: 22px;
+    border-bottom: solid 2px #ff1648;
+    i{
+        float: left;
+        overflow: hidden;
+        line-height: 99em;
+        margin-top: 2px;
+        background: url(../../sprites/i23.png) no-repeat 0 0;
+        width: image-width;
+        height: image-height;
+    }
+    span{
+        float: left;
+        color: #666;
+        margin-left: 10px;
+    }
+}
+
+.tab-sp-bd{
+    width: 512px;
+    height: 150px;
+    padding: 17px 0;
+    background-color: #f0f0f0;
+    *zoom: 1;
+    a, img{
+        width: 242px;
+        height: 150px;
+    }
+    a{
+        float: left;
+        margin-left: 10px;
+    }
+}
+
+.tab-spa-large{
+    display: block;
+    &, img{
+        width: 158px;
+        height: 276px;
+    }
+}
+
+.tab-spa-tit{
+    margin-top: 7px;
+    height: 22px;
+    line-height: 22px;
+    color: #666;
+    font-weight: normal;
+}
+
+.tab-spa-small{
+    display: block;
+    &, img{
+        width: 158px;
+        height: 186px;
+    }
+}

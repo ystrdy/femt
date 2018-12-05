@@ -1,0 +1,53 @@
+@import "../../components/Common/Common.scss";
+@import "../../components/Loading/Loading.scss";
+@import "../../components/NetworkError/NetworkError.scss";
+@import "../../components/IndexTabs/IndexTabs.scss";
+@import "../../components/TabNewsFeed/TabNewsFeed.scss";
+@import "../../components/TabShopCarousel/TabShopCarousel.scss";
+@import "../../components/TabShopGrid/TabShopGrid.scss";
+@import "nanoscroller/bin/css/nanoscroller.css";
+@import "../../components/TabDiscountCoupon/TabDiscountCoupon.scss";
+@import "../../components/TabGameStyle/TabGameStyle.scss";
+@import "../../components/SplashAD/SplashAD.scss";
+@import "../../components/TabShop1111Tabs/TabShop1111Tabs.scss";
+
+html, body{
+    overflow: hidden;
+}
+
+.index-container{
+    width: 798px;
+    height: 514px;
+    overflow: hidden;
+    position: relative;
+    background: #fff;
+}
+
+/**
+ * 定义全局的滚动样式
+ */
+.nano{
+    & > .nano-pane{
+        background: transparent;
+        filter: none;
+        & > .nano-slider{
+            background: #999;
+            filter: none;
+            border-radius: 4px;
+            & > .u, & > .d{
+                position: absolute;
+                width: 8px;
+                height: 4px;
+                left: 0;
+            }
+            & > .u{
+                top: 0;
+                background: url(../../sprites/i5.png);
+            }
+            & > .d{
+                bottom: 0;
+                background: url(../../sprites/i6.png);
+            }
+        }
+    }
+}

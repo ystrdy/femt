@@ -1,0 +1,46 @@
+{% extends "../../components/Common/Common.njk" %}
+
+{% block style %}
+{{ super() }}
+<link rel="stylesheet" href="css/skin.css" inline>
+{% endblock %}
+
+{% block container %}
+<div class="skin-container">
+    {% include "../../components/Loading/Loading.njk" %}
+    {# <div class="sc-body">
+        <a href="">
+            <img src="{{Random.image('800x110', Random.color())}}">
+        </a>
+    </div> #}
+</div>
+{% endblock %}
+
+{% block script %}
+{{ super() }}
+<script src="js/skin.js" inline></script>
+{% endblock%}
+
+{% block statistic %}
+{{ super() }}
+<script>
+// 添加百度统计事件统计，统计下载
+var handler = function(ev){
+    if (!_hmt) return;
+    var event = ev || window.event;
+    var target = event.target || event.srcElement;
+    var parent = target.parentNode;
+    var label, value;
+    if (target && target.tagName.toLowerCase() === 'img' &&
+        parent && parent.tagName.toLowerCase() === 'a'){
+        label = '-';
+        value = parent.href;
+    }
+    if (label && value) {
+        _hmt.push(['_trackEvent', 'skinad', 'click', label, value]);
+    }
+}
+if(document.addEventListener) document.addEventListener('click', handler, false);
+else if(document.attachEvent) document.attachEvent('onclick', handler);
+</script>
+{% endblock %}
