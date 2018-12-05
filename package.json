@@ -6,8 +6,12 @@
     "start": "tsc --watch",
     "lint": "eslint src --ext .ts",
     "clean": "rimraf dist",
-    "build": "npm run clean && tsc",
-    "precommit": "npm run lint"
+    "build": "npm run clean && tsc"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "npm run lint"
+    }
   },
   "repository": {
     "type": "git",
