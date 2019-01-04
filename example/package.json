@@ -1,0 +1,31 @@
+{
+  "private": true,
+  "scripts": {
+    "start": "fis3 release -f ../dist/fis-conf.dev.js -r ./ -wL",
+    "build": "npm run clean && fis3 release -f ../dist/fis-conf.dev.js -r ./",
+    "clean": "rimraf ./build & fis3 release -c"
+  },
+  "dependencies": {
+    "@types/jquery": "^1.10.34",
+    "@types/nanoscroller": "^0.8.2",
+    "blueimp-md5": "^2.10.0",
+    "console-polyfill": "^0.3.0",
+    "es6-promise": "^4.2.5",
+    "html-entities": "^1.2.1",
+    "jcarousel": "^0.3.8",
+    "jquery": "^1.12.4",
+    "json-fallback": "0.0.1",
+    "knuth-shuffle": "^1.0.8",
+    "nanoscroller": "^0.8.7",
+    "qrcodejs2": "0.0.2",
+    "querystringify": "^2.1.0",
+    "scriptjs": "^2.5.9",
+    "string-hash": "^1.1.3",
+    "throttle-debounce": "^1.1.0",
+    "tiny-emitter": "^2.0.2"
+  },
+  "devDependencies": {
+    "fis3": "^3.4.40",
+    "rimraf": "^2.6.2"
+  }
+}
