@@ -8,7 +8,7 @@ fis.set('project.fileType.text', 'njk');
 fis.match('src/views/**/(*).njk', {
     release: '$1',
     rExt: '.html',
-    parser: nunjucksParser,
+    parser: nunjucksParser(),
     deploy: fis.plugin('local-deliver', {
         to: 'build'
     }),
