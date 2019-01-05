@@ -4,8 +4,8 @@ import { Random } from "mockjs";
 import { project } from "fis3";
 
 export interface ISettings {
-    searchPath?: string | string[],         // 搜索路径，默认值为当前项目目录下的src文件夹
-    context?: object,                       // 注入到模板的值
+    searchPath?: string | string[];         // 搜索路径，默认值为当前项目目录下的src文件夹
+    context?: object;                       // 注入到模板的值
 }
 
 function nunjucksParser(settings?: ISettings) {
@@ -36,7 +36,7 @@ function nunjucksParser(settings?: ISettings) {
         }
         const template = new Template(content, environment, realpath);
         return template.render(context);
-    }
+    };
 }
 
 export default nunjucksParser;
