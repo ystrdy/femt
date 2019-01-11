@@ -26,7 +26,7 @@ fis.hook('relative');
         rExt: '.html',
         parser: nunjucksParser(),
         // relative: true,
-    })
+    });
 });
 
 // 处理css
@@ -39,7 +39,7 @@ fis.hook('relative');
                 load: async function(...args) {
                     const content = await load.apply(this, args);
                     // 替换url里面的路径
-                    const [ filename ] = args;
+                    const [filename] = args;
                     return content.replace(/url\(['"]?(.+?)['"]?\)/g, (_, url) => {
                         return `url(${resolve(dirname(filename), url)})`;
                     });
@@ -53,7 +53,7 @@ fis.hook('relative');
         ], {
             parser: require('postcss-scss'),
             map: { inline: true },
-            // map: { inline: false, prev: false, annotation: false },            
+            // map: { inline: false, prev: false, annotation: false },
         }),
         // relative: true,
     });

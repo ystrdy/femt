@@ -36,7 +36,7 @@ function nunjucksParser(settings?: ISettings) {
             context = { ...context, ...settings.context };
         }
         const template = new Template(content, environment, realpath);
-        return await pify(template.render.bind(template))(context);
+        return pify(template.render.bind(template))(context);
     };
 }
 
