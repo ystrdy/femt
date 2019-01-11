@@ -2,6 +2,7 @@ import { Environment, FileSystemLoader, Template } from "nunjucks";
 import { parse, join } from "path";
 import { Random } from "mockjs";
 import { project } from "fis3";
+import pify from "pify";
 
 export interface ISettings {
     searchPath?: string | string[];         // 搜索路径，默认值为当前项目目录下的src文件夹
@@ -20,7 +21,7 @@ function nunjucksParser(settings?: ISettings) {
     };
     const environment = new Environment(loader, options);
 
-    return function (content: string, file: IFile) {
+    return async function (content: string, file: IFile): Promise<string> {
         // 给fis系统中的文件添加依赖
         loader.getSource = (name: string) => {
             if (file.cache) {
@@ -35,7 +36,7 @@ function nunjucksParser(settings?: ISettings) {
             context = { ...context, ...settings.context };
         }
         const template = new Template(content, environment, realpath);
-        return template.render(context);
+        return await pify(template.render.bind(template))(context);
     };
 }
 

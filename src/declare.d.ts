@@ -1,6 +1,6 @@
 interface ISettings {
     // 基本属性
-    release?: string;
+    release?: false | string;
     packTo?: string;
     packOrder?: number;
     query?: string;
@@ -21,6 +21,7 @@ interface ISettings {
     useSameNameRequire?: boolean;
     useCache?: boolean;
     useCompile?: boolean;
+    relative?: boolean;
     // 插件属性
     lint?: PluginDefine;
     parser?: PluginDefine;
@@ -70,7 +71,7 @@ interface IFile {
     [propName: string]: any;
 }
 
-type PluginProcessor = (content: string, file: IFile, settings: ISettings) => string;
+type PluginProcessor = (content: string, file: IFile, settings: any) => Promise<string>;
 
 type PluginDefine = IPluginOptions | IPluginOptions[] | PluginProcessor | PluginProcessor[];
 
@@ -80,4 +81,5 @@ interface IFIS {
     media: (mode: string) => IFIS;
     match: (selector: string, settings: ISettings, important?: boolean) => IFIS;
     plugin: (name: string, settings: any, position?: PluginPosition) => IPluginOptions;
+    hook: (name: string) => IFIS;
 }
